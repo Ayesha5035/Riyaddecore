@@ -1739,10 +1739,10 @@ section,
 }
 
 .blog-hero .hero-title {
-  font-size: 160px !important;
+  font-size: 120px !important;
   line-height: 1.2 !important;
   font-family: 'Amatic SC', cursive;
-  font-weight: 550;
+  font-weight: 500;
   color: #c8c845 !important;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -2337,11 +2337,11 @@ section,
 }
 
 .your-ele {
-  font-size: 58px !important;  /* Match blog hero exactly */
+  font-size: 38px !important;  /* Match blog hero exactly */
   font-weight: 1500 !important;
   margin-bottom: 25px;
   letter-spacing: 1px;
-  font-family: 'Amatic SC', cursive !important;
+  font-family: 'Comic Sans MS', cursive !important;
   color: #71400c;
   line-height: 1.2;
 }

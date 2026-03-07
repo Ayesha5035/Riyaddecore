@@ -90,16 +90,21 @@
             </a>
           </li>
 
-          <li class="nav-item dropdown language-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span id="current-lang">العربية</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="langDropdown">
-              <li><a class="dropdown-item" href="#" onclick="setLanguage('ar'); return false;">العربية</a></li>
-              <li><a class="dropdown-item" href="#" onclick="setLanguage('en'); return false;">English</a></li>
-            </ul>
+         <li class="dropdown language-dropdown">
+          <a href="#">
+          <span id="current-lang">العربية</span>
+          <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+
+          <ul>
+          <li>
+           <a href="#" onclick="setLanguage('ar'); return false;">العربية</a>
           </li>
+        <li>
+      <a href="#" onclick="setLanguage('en'); return false;">English</a>
+    </li>
+  </ul>
+</li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -432,7 +437,7 @@
             <p>
               <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong> <span> 0544928641</span><br>
               <strong data-en="Email:" data-ar="البريد الإلكتروني:">Email:</strong>
-              <span>riyadhdecor.woodworks@gmail.com</span><br>
+              <span>Zm708392@gmail. Com</span><br>
             </p>
           </div>
         </div>
@@ -488,6 +493,7 @@
   <a href="https://wa.me/0544928641" target="_blank" class="float-btn whatsapp-btn">
     <i class="bi bi-whatsapp"></i>
   </a>
+</div>
 
 <script>
   // Global variable for Swiper

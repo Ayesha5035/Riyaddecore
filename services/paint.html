@@ -43,22 +43,29 @@
           </li>
           <li><a href="../blogs.html" data-en="Blogs" data-ar="المدونة">Blogs</a></li>
           <li><a href="../index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-          <li class="nav-item dropdown language-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span id="current-lang" data-en="English" data-ar="العربية">English</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="langDropdown">
-              <li><a class="dropdown-item" href="#" onclick="setLanguage('ar')">العربية</a></li>
-              <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
-            </ul>
-          </li>
+
+          <li class="dropdown language-dropdown">
+  <a href="#">
+    <span id="current-lang">العربية</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+
+  <ul>
+    <li>
+      <a href="#" onclick="setLanguage('ar'); return false;">العربية</a>
+    </li>
+    <li>
+      <a href="#" onclick="setLanguage('en'); return false;">English</a>
+    </li>
+  </ul>
+</li>
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
-
+ <main class="main">  <!-- ← ADD THIS -->
   <!-- HERO SECTION - Simple with background image -->
   <section class="paint-hero">
     <div class="container">
@@ -119,7 +126,7 @@
           <div class="service-card" data-aos="flip-up">
             <img src="../assets/img//servic/p3.png" alt="Riyadh Painting Contractor">
             <div class="card-content text-center">
-              <h3 data-ar=" - مقاول دهانات الرياض" data-en="Riyadh Painting Contractor">
+              <h3 data-ar="مقاول دهانات الرياض" data-en="Riyadh Painting Contractor">
                 Riyadh Painting Contractor
               </h3>
               <p class="lead"
@@ -275,9 +282,11 @@
       <a href="tel:+966544928641" class="btn btn-light btn-lg me-2"><i class="bi bi-telephone"></i> 0544928641</a>
       <a href="https://wa.me/966544928641" class="btn btn-outline-light btn-lg"><i class="bi bi-whatsapp"></i> <span
           data-en="WhatsApp" data-ar="واتساب">WhatsApp</span></a>
-    </div>
-  </section>
-  </main>
+      </div>
+      </section>
+
+
+  </main> <!-- ← THIS CLOSES MAIN -->
 
   <footer id="footer" class="footer dark-background">
 
@@ -329,6 +338,20 @@
 
   </footer>
 
+  <!--Floating Buttons-->
+  <div class="floating-buttons">
+  
+    <!-- Phone -->
+    <a href="tel:+0544928641" class="float-btn phone-btn">
+    <i class="bi bi-telephone-fill"></i>
+    </a>
+
+     <!-- WhatsApp -->
+    <a href="https://wa.me/0544928641" target="_blank" class="float-btn whatsapp-btn">
+    <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -338,21 +361,9 @@
   <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="../assets/js/main.js"></script>
 
-  Floating Buttons
-<div class="floating-buttons">
-  
-  <!-- Phone -->
-  <a href="tel:+0544928641" class="float-btn phone-btn">
-    <i class="bi bi-telephone-fill"></i>
-  </a>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/0544928641" target="_blank" class="float-btn whatsapp-btn">
-    <i class="bi bi-whatsapp"></i>
-  </a>
 
   <script>
-  function setLanguage(lang) {
+   function setLanguage(lang) {
     // Save language preference
     localStorage.setItem('preferred-language', lang);
     
@@ -364,6 +375,8 @@
         el.innerHTML = el.getAttribute("data-" + lang);
       }
     });
+
+    
 
     // Apply RTL/LTR only to main content (not entire body)
     const main = document.querySelector("main");
