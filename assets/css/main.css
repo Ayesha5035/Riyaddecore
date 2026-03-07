@@ -2348,7 +2348,7 @@ section,
 
 
 .title {
-  font-family: 'Comic Sans MS';
+  font-family: 'Amatic SC', cursive !important;
   font-size: 28px;
   letter-spacing: 1px;
   font-weight: 400;
