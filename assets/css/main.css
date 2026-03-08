@@ -95,7 +95,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--default-font)
 }
 
 /* Pulsating Play Button
@@ -845,6 +845,7 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  font-family: var(--default-font);
 }
 
 .hero p {
